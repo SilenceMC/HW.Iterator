@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.Random;
 
-public class MyIterator implements Iterator {
+public class MyIterator implements Iterator<Integer> {
     protected Random random;
     private int min;
     private int max;
@@ -18,7 +18,7 @@ public class MyIterator implements Iterator {
     }
 
     @Override
-    public Object next() {
+    public Integer next() {
         return min + random.nextInt(max + 1 - min);
     }
 }
